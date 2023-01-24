@@ -1,0 +1,18 @@
+﻿<h1>Parameters</h1>
+
+<h5>
+    Route Parameter: @RouteParameter
+</h5>
+
+<h5>
+    Query Parameter (QueryParameter) value: @QueryParameter
+</h5>
+
+<a class="text-decoration-none btn btn-primary mt-5" href="/parameters/6?QueryParameter=17">Test It</a>
+
+@code {
+    [Parameter]
+    public int RouteParameter { get; set; }
+    [Parameter]
+    public int QueryParameter { get; set; }
+}

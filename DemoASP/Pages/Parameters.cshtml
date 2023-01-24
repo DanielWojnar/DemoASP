@@ -1,0 +1,7 @@
+﻿@page "/parameters/{RouteParameter:int?}"
+@model DemoASP.Pages.ParametersModel
+@{
+    ViewData["Title"] = "Parameters";
+}
+
+<component type="typeof(Parameters)" render-mode="ServerPrerendered" param-RouteParameter="@(int.Parse(ViewContext.RouteData.Values["RouteParameter"]?.ToString() ?? "0"))" param-QueryParameter="@(int.Parse(Request.Query["QueryParameter"].FirstOrDefault() ?? "0"))" />
